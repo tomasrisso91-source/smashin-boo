@@ -304,8 +304,10 @@ function renderProductos(lista, animar) {
         const sinStock = producto.cantidad === 0
         const htmlstring = `
             <div class="producto" style="--i: ${indice}">
-                <img class="producto__imagen" src="${producto.imagen}" alt="${producto.titulo.replace(/"/g, '')}"
-                     onerror="imagenDeReemplazo(this, '${producto.titulo.replace(/"/g, '')}')">
+                <div class="producto__foto ${producto.categoria === 'Bebidas' ? 'producto__foto--ajustada' : ''}" style="--foto: url('${producto.imagen}')">
+                    <img class="producto__imagen" src="${producto.imagen}" alt="${producto.titulo.replace(/"/g, '')}"
+                         onerror="imagenDeReemplazo(this, '${producto.titulo.replace(/"/g, '')}')">
+                </div>
                 ${etiquetaCategoria(producto.categoria)}
                 <h3 class="producto__titulo">${producto.titulo}</h3>
                 <p class="producto__descripcion">${producto.descripcion}</p>
