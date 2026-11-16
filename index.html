@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smashing Buu — Smash Burgers</title>
+    <link rel="icon" type="image/webp" href="img/logo.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__contenido">
+            <a href="#" class="marca">
+                <img src="img/logo.webp" alt="Logo de Smashing Buu" class="marca__logo">
+                <h1 class="logo">Smashing<span>Buu</span></h1>
+            </a>
+            <nav class="nav">
+                <a href="#" data-categoria="todos" class="activo">Menú</a>
+                <a href="#" data-categoria="Fase 1" class="ki ki--1"><span class="ki__llamas" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Fase 1</a>
+                <a href="#" data-categoria="Fase 2" class="ki ki--2"><span class="ki__llamas" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Fase 2</a>
+                <a href="#" data-categoria="Fase 3" class="ki ki--3"><span class="ki__llamas" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Fase 3</a>
+                <a href="#" data-categoria="Papas">Papas</a>
+                <a href="#" data-categoria="Bebidas">Bebidas</a>
+                <a href="#" id="abrir-carrito" class="nav__carrito">🍔 Mi pedido <span id="carrito-contador" class="contador">0</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <img src="img/logo.webp" alt="" class="hero__logo">
+        <h2>Smash burgers con poder Saiyajin</h2>
+        <p>Aumentá tu poder comiendo las mejores hamburguesas smash</p>
+        <div class="hero__linea"></div>
+        <div class="hero__datos">
+            <span>
+                <!-- Cohete de reparto (dibujo propio) -->
+                <svg class="icono-cohete" viewBox="0 0 40 48" aria-hidden="true">
+                    <path class="icono-cohete__llama" d="M15 36 C15 42 18 45 20 48 C22 45 25 42 25 36 Z" fill="#ffb300"/>
+                    <path d="M17 36 C17 40 19 42 20 44 C21 42 23 40 23 36 Z" fill="#fff3c4"/>
+                    <path d="M12 26 L4 34 L4 38 L13 34 Z" fill="#ffc531" stroke="#1a0b00" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="M28 26 L36 34 L36 38 L27 34 Z" fill="#ffc531" stroke="#1a0b00" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="M20 2 C29 8 31 20 28 36 L12 36 C9 20 11 8 20 2 Z" fill="#fa71ab" stroke="#1a0b00" stroke-width="1.5" stroke-linejoin="round"/>
+                    <path d="M20 2 C25 6 27 11 28 15 L12 15 C13 11 15 6 20 2 Z" fill="#ffc531" stroke="#1a0b00" stroke-width="1.5" stroke-linejoin="round"/>
+                    <circle cx="20" cy="23" r="5" fill="#9fd8ff" stroke="#1a0b00" stroke-width="1.5"/>
+                    <path d="M18 21 A3 3 0 0 1 21 20" fill="none" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+                Delivery gratis &amp; Take Away
+            </span>
+            <span>📍 Carmen de Areco</span>
+            <span>🕗 20 a 00 hs</span>
+        </div>
+    </section>
+
+    <main class="contenedor">
+        <h2 class="titulo-seccion">Nuestro menú</h2>
+        <div id="productos" class="productos"></div>
+    </main>
+
+    <div id="overlay" class="overlay"></div>
+
+    <aside id="carrito-panel" class="carrito-panel">
+        <div class="carrito-panel__header">
+            <h2>Mi pedido</h2>
+            <button id="cerrar-carrito" class="carrito-panel__cerrar" title="Cerrar">✕</button>
+        </div>
+        <div id="carrito-lista" class="carrito-panel__lista"></div>
+        <div class="carrito-panel__footer">
+            <div class="carrito-panel__total">
+                <span>Total:</span>
+                <strong id="carrito-total">$0</strong>
+            </div>
+            <button id="finalizar-compra" class="producto__boton">Confirmar pedido</button>
+            <button id="vaciar-carrito" class="boton-secundario">Vaciar pedido</button>
+        </div>
+    </aside>
+
+    <footer class="footer">
+        <div class="footer__datos">
+            <span>📍 Larrea 959, Carmen de Areco</span>
+            <span>🕗 Todos los días de 20 a 00 hs</span>
+            <a href="https://wa.me/542273421475" target="_blank" rel="noopener">💬 WhatsApp 2273421475</a>
+            <a href="https://www.instagram.com/smashingbuu_/" target="_blank" rel="noopener">📸 @smashingbuu_</a>
+        </div>
+        <p>© 2026 Smashing Buu — Smash Burgers</p>
+    </footer>
+
+    <script src="dragon.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
